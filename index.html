@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝Text Editor Pro📝</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Text Converter</h1>
+    </header>
+    <main>
+        <section id="converter">
+            <h2>Convert Text</h2>
+
+            <!-- First Function: Convert to Single Line -->
+            <div class="section single-line">
+                <center><h1 style="color:greenyellow">Convert to Single Line</h1></center>
+                <div class="input-with-info">
+                    <textarea id="inputText1" placeholder="Enter sentences or words here..."></textarea>
+                    <button class="info-btn" onclick="showInfo('singleLineInfo')">i</button>
+                </div>
+                <button onclick="convertToSingleLine()">Convert</button>
+                <div class="output-section">
+                    <textarea id="outputText1" placeholder="Output will appear here..."></textarea>
+                    <button onclick="copyText('outputText1')">Copy Text</button>
+                    <p id="characterCount1">Character Count: 0</p>
+                    <p id="repeatedWords1">Repeated Words: </p>
+                </div>
+            </div>
+
+            <!-- Second Function: Convert to N x 2 Format -->
+            <div class="section n-by-2">
+               <center> <h1 style="color:gray">Convert to N x 2 Format</h1></center>
+                <div class="input-with-info">
+                    <textarea id="inputText2" placeholder="Enter sentences or words in columns..."></textarea>
+                    <button class="info-btn" onclick="showInfo('nBy2Info')">i</button>
+                </div>
+                <button onclick="convertToNby2()">Convert</button>
+                <div class="output-section">
+                    <textarea id="outputText2" placeholder="Output will appear here..."></textarea>
+                    <button onclick="copyText('outputText2')">Copy Text</button>
+                    <p id="characterCount2">Character Count: 0</p>
+                    <p id="repeatedWords2">Repeated Words: </p>
+                </div>
+            </div>
+
+            <!-- Third Function: Format Column Text -->
+            <div class="section format-columns">
+                <center><h1 style="color:green">Format Column Text</h1></center>
+                <div class="input-with-info">
+                    <textarea id="inputText3" placeholder="Enter text to format into columns..."></textarea>
+                    <button class="info-btn" onclick="showInfo('formatColumnTextInfo')">i</button>
+                </div>
+                <button onclick="formatColumnText()">Format</button>
+                <div class="output-section">
+                    <textarea id="outputText3" placeholder="Output will appear here..."></textarea>
+                    <button onclick="copyText('outputText3')">Copy Text</button>
+                    <p id="characterCount3">Character Count: 0</p>
+                    <p id="repeatedWords3">Repeated Words: </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
